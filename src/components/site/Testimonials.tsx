@@ -23,7 +23,7 @@ const items = [
 
 export function Testimonials() {
   const [i, setI] = useState(0);
-  const item = items[i];
+  const item = items[i]!;
 
   return (
     <section className="bg-background py-24 md:py-32">
