@@ -39,7 +39,8 @@ export const Route = createFileRoute("/")({
           areaServed: "SA",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "الرياض",
+            streetAddress: "حي البلدية",
+            addressLocality: "حفر الباطن",
             addressCountry: "SA",
           },
           telephone: "+966506007896",
