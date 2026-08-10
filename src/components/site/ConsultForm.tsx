@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { CheckCircle2, Paperclip } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const serviceOptions = [
@@ -20,7 +20,6 @@ const serviceOptions = [
 
 export function ConsultForm() {
   const [sent, setSent] = useState(false);
-  const [fileName, setFileName] = useState("");
   const [error, setError] = useState("");
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -29,6 +28,9 @@ export function ConsultForm() {
     const name = String(data.get("name") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
     const details = String(data.get("details") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const service = String(data.get("service") ?? "").trim();
+    if (String(data.get("company_hp") ?? "")) return;
 
     if (name.length < 3 || name.length > 100) return setError("يرجى إدخال الاسم الكامل بشكل صحيح.");
     if (!/^[0-9+\s-]{9,20}$/.test(phone)) return setError("يرجى إدخال رقم جوال صحيح.");
@@ -36,6 +38,21 @@ export function ConsultForm() {
       return setError("يرجى كتابة وصف مختصر للحالة (١٠ أحرف على الأقل).");
 
     setError("");
+
+    const message = [
+      "طلب استشارة قانونية - موقع الحميدي للمحاماة",
+      "",
+      `الاسم: ${name}`,
+      `الجوال: ${phone}`,
+      email ? `البريد: ${email}` : "",
+      `نوع الخدمة: ${service}`,
+      "",
+      `تفاصيل الحالة: ${details}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    window.open(`https://wa.me/966506007896?text=${encodeURIComponent(message)}`, "_blank", "noopener");
     setSent(true);
   }
 
@@ -60,9 +77,10 @@ export function ConsultForm() {
               className="rounded-sm bg-background p-12 text-center shadow-luxe"
             >
               <CheckCircle2 className="mx-auto text-primary" size={44} strokeWidth={1.3} />
-              <h3 className="mt-6 text-xl font-semibold text-primary">تم إرسال طلبك بنجاح</h3>
+              <h3 className="mt-6 text-xl font-semibold text-primary">تم تحويل طلبك إلى واتساب</h3>
               <p className="mt-3 text-sm leading-8 text-muted-foreground">
-                شكرًا لثقتك بمكتب الحميدي. سيتم مراجعة طلبك والتواصل معك لتحديد موعد الاستشارة.
+                اضغط زر الإرسال داخل واتساب لإتمام الطلب. إن لم تُفتح النافذة تلقائيًا، يمكنك التواصل
+                مباشرة على الرقم ٠٥٠٦٠٠٧٨٩٦.
               </p>
               <button
                 onClick={() => setSent(false)}
@@ -122,22 +140,6 @@ export function ConsultForm() {
                   placeholder="اكتب ملخصًا موجزًا لحالتك..."
                 />
               </div>
-              <div className="md:col-span-2">
-                <label className="flex cursor-pointer items-center justify-between gap-4 rounded-sm border border-dashed border-input px-4 py-4 text-sm text-muted-foreground transition hover:border-primary">
-                  <span className="flex items-center gap-2">
-                    <Paperclip size={16} />
-                    {fileName || "رفع ملفات (اختياري)"}
-                  </span>
-                  <input
-                    type="file"
-                    className="hidden"
-                    multiple
-                    onChange={(e) => setFileName(e.target.files?.[0]?.name ?? "")}
-                  />
-                  <span className="text-xs text-primary">استعراض</span>
-                </label>
-              </div>
-
               {/* حماية بسيطة من الرسائل المزعجة */}
               <input
                 type="text"
@@ -161,7 +163,7 @@ export function ConsultForm() {
                   إرسال الطلب
                 </button>
                 <p className="mt-3 text-center text-xs text-muted-foreground">
-                  جميع البيانات تُعامل بسرية تامة.
+                  سيتم تحويلك إلى واتساب لإكمال الإرسال. جميع البيانات تُعامل بسرية تامة.
                 </p>
               </div>
             </form>
