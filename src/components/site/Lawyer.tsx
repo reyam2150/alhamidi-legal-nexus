@@ -81,9 +81,9 @@ export function Lawyer() {
             </a>
             <div className="flex gap-2">
               {[
-                { icon: Phone, href: "tel:+966500000000", label: "اتصال" },
-                { icon: MessageCircle, href: "https://wa.me/966500000000", label: "واتساب" },
-                { icon: Mail, href: "mailto:info@alhumaidi-law.sa", label: "البريد" },
+                { icon: Phone, href: "tel:+966506007896", label: "اتصال" },
+                { icon: MessageCircle, href: "https://wa.me/966506007896", label: "واتساب" },
+                { icon: Mail, href: "mailto:humidilawyer@gmail.com", label: "البريد" },
               ].map((c) => (
                 <a
                   key={c.label}

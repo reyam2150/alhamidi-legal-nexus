@@ -73,23 +73,23 @@ export function Footer() {
           <h3 className="text-sm font-semibold">معلومات التواصل</h3>
           <ul className="mt-5 space-y-3 text-sm text-primary-foreground/60">
             <li>
-              <a href="tel:+966500000000" className="transition hover:text-primary-foreground">
-                +966 50 000 0000
+              <a href="tel:+966506007896" className="transition hover:text-primary-foreground">
+                +966 50 600 7896
               </a>
             </li>
             <li>
               <a
-                href="mailto:info@alhumaidi-law.sa"
+                href="mailto:humidilawyer@gmail.com"
                 className="transition hover:text-primary-foreground"
               >
-                info@alhumaidi-law.sa
+                humidilawyer@gmail.com
               </a>
             </li>
-            <li>الرياض، المملكة العربية السعودية</li>
+            <li>حي البلدية، حفر الباطن، المملكة العربية السعودية</li>
             <li>الأحد - الخميس: ٩:٠٠ ص - ٥:٠٠ م</li>
           </ul>
           <div className="mt-5 flex gap-3 text-sm text-primary-foreground/60">
-            <a href="https://wa.me/966500000000" className="hover:text-primary-foreground">
+            <a href="https://wa.me/966506007896" className="hover:text-primary-foreground">
               واتساب
             </a>
             <span>·</span>

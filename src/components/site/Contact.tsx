@@ -2,10 +2,10 @@ import { Reveal, SectionHeading } from "./Reveal";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
 const info = [
-  { icon: Phone, label: "رقم الهاتف", value: "+966 50 000 0000", href: "tel:+966500000000" },
-  { icon: MessageCircle, label: "واتساب", value: "+966 50 000 0000", href: "https://wa.me/966500000000" },
-  { icon: Mail, label: "البريد الإلكتروني", value: "info@alhumaidi-law.sa", href: "mailto:info@alhumaidi-law.sa" },
-  { icon: MapPin, label: "عنوان المكتب", value: "الرياض، المملكة العربية السعودية" },
+  { icon: Phone, label: "رقم الهاتف", value: "+966 50 600 7896", href: "tel:+966506007896" },
+  { icon: MessageCircle, label: "واتساب", value: "+966 50 600 7896", href: "https://wa.me/966506007896" },
+  { icon: Mail, label: "البريد الإلكتروني", value: "humidilawyer@gmail.com", href: "mailto:humidilawyer@gmail.com" },
+  { icon: MapPin, label: "عنوان المكتب", value: "حي البلدية، حفر الباطن، المملكة العربية السعودية" },
   { icon: Clock, label: "ساعات العمل", value: "الأحد - الخميس: ٩:٠٠ ص - ٥:٠٠ م" },
 ];
 
