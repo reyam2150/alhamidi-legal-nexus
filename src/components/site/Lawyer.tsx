@@ -1,6 +1,6 @@
 import { Reveal } from "./Reveal";
 import { Mail, Phone, MessageCircle } from "lucide-react";
-import portrait from "@/assets/lawyer.jpg";
+import portraitAsset from "@/assets/lawyer-humaidi.jpeg.asset.json";
 
 const qualifications = [
   "بكالوريوس الشريعة والأنظمة",
@@ -24,9 +24,9 @@ export function Lawyer() {
           <div className="relative">
             <div className="absolute -bottom-5 -left-5 hidden h-full w-full rounded-sm border border-primary/20 sm:block" />
             <img
-              src={portrait}
+              src={portraitAsset.url}
               alt="المحامي والمستشار القانوني في مكتب الحميدي"
-              width={1024}
+              width={1109}
               height={1280}
               loading="lazy"
               className="relative w-full rounded-sm object-cover shadow-luxe"
@@ -37,7 +37,7 @@ export function Lawyer() {
         <Reveal delay={0.1}>
           <p className="eyebrow">نبذة عن المحامي</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-primary md:text-4xl">
-            عبدالله الحميدي
+            الحميدي
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">محامٍ ومستشار قانوني</p>
           <div className="hairline my-7 max-w-[8rem]" />

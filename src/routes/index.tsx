@@ -7,7 +7,6 @@ import { WhyUs } from "@/components/site/WhyUs";
 import { Lawyer } from "@/components/site/Lawyer";
 import { Process } from "@/components/site/Process";
 import { Testimonials } from "@/components/site/Testimonials";
-import { Blog } from "@/components/site/Blog";
 import { Faq } from "@/components/site/Faq";
 import { ConsultForm } from "@/components/site/ConsultForm";
 import { Contact } from "@/components/site/Contact";
@@ -64,7 +63,6 @@ function Home() {
         <Lawyer />
         <Process />
         <Testimonials />
-        <Blog />
         <Faq />
         <ConsultForm />
         <Contact />
