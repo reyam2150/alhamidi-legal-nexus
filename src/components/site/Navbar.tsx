@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-ah.png";
+import logoAsset from "@/assets/logo-full.png.asset.json";
 
 const links = [
   { href: "#home", label: "الرئيسية" },
   { href: "#about", label: "من نحن" },
   { href: "#services", label: "الخدمات" },
   { href: "#lawyer", label: "نبذة عن المحامي" },
-  { href: "#blog", label: "المدونة القانونية" },
   { href: "#faq", label: "الأسئلة الشائعة" },
   { href: "#contact", label: "تواصل معنا" },
 ];
@@ -34,22 +33,12 @@ export function Navbar() {
       <nav className="container-luxe flex h-20 items-center justify-between gap-6">
         <a href="#home" className="flex items-center gap-3">
           <img
-            src={logo}
-            alt="شعار مكتب الحميدي للمحاماة"
-            width={40}
-            height={40}
-            className={`h-10 w-10 object-contain transition ${scrolled ? "" : "brightness-0 invert"}`}
+            src={logoAsset.url}
+            alt="شعار مكتب الحميدي للمحاماة والاستشارات القانونية"
+            width={1228}
+            height={344}
+            className={`h-11 w-auto object-contain transition ${scrolled ? "" : "brightness-0 invert"}`}
           />
-          <span
-            className={`hidden text-sm font-semibold leading-tight sm:block ${
-              scrolled ? "text-primary" : "text-primary-foreground"
-            }`}
-          >
-            الحميدي للمحاماة
-            <span className="block text-[11px] font-normal opacity-70">
-              والاستشارات القانونية
-            </span>
-          </span>
         </a>
 
         <ul className="hidden items-center gap-7 text-sm lg:flex">

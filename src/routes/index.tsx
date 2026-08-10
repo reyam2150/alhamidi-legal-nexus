@@ -7,7 +7,6 @@ import { WhyUs } from "@/components/site/WhyUs";
 import { Lawyer } from "@/components/site/Lawyer";
 import { Process } from "@/components/site/Process";
 import { Testimonials } from "@/components/site/Testimonials";
-import { Blog } from "@/components/site/Blog";
 import { Faq } from "@/components/site/Faq";
 import { ConsultForm } from "@/components/site/ConsultForm";
 import { Contact } from "@/components/site/Contact";
@@ -40,11 +39,12 @@ export const Route = createFileRoute("/")({
           areaServed: "SA",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "الرياض",
+            streetAddress: "حي البلدية",
+            addressLocality: "حفر الباطن",
             addressCountry: "SA",
           },
-          telephone: "+966500000000",
-          email: "info@alhumaidi-law.sa",
+          telephone: "+966506007896",
+          email: "humidilawyer@gmail.com",
         }),
       },
     ],
@@ -64,7 +64,6 @@ function Home() {
         <Lawyer />
         <Process />
         <Testimonials />
-        <Blog />
         <Faq />
         <ConsultForm />
         <Contact />
