@@ -83,14 +83,6 @@ export function Footer() {
             <a href="https://wa.me/966506007896" className="hover:text-primary-foreground">
               واتساب
             </a>
-            <span>·</span>
-            <a href="#contact" className="hover:text-primary-foreground">
-              لينكدإن
-            </a>
-            <span>·</span>
-            <a href="#contact" className="hover:text-primary-foreground">
-              إكس
-            </a>
           </div>
         </div>
       </div>
