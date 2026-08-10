@@ -3,7 +3,7 @@ import { Mail, Phone, MessageCircle } from "lucide-react";
 import portraitAsset from "@/assets/lawyer-humaidi.jpeg.asset.json";
 
 const qualifications = [
-  "بكالوريوس الشريعة والأنظمة",
+  "بكالوريوس قانون",
   "مرخص من الهيئة السعودية للمحامين",
   "دورات متخصصة في التحكيم التجاري",
   "عضوية في جهات قانونية مهنية",
