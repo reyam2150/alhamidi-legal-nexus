@@ -42,7 +42,7 @@ export function SectionHeading({
         {eyebrow}
       </p>
       <h2
-        className={`mt-4 text-3xl font-semibold tracking-tight md:text-4xl ${
+        className={`mt-4 text-3xl font-semibold md:text-4xl ${
           tone === "dark" ? "text-primary-foreground" : "text-primary"
         }`}
       >

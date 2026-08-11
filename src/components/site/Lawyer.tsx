@@ -36,7 +36,7 @@ export function Lawyer() {
 
         <Reveal delay={0.1}>
           <p className="eyebrow">نبذة عن المحامي</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-primary md:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold text-primary md:text-4xl">
             الحميدي
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">محامٍ ومستشار قانوني</p>

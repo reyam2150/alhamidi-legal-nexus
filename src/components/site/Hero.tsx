@@ -30,7 +30,7 @@ export function Hero() {
           className="max-w-3xl"
         >
           <p className="eyebrow text-primary-foreground/60">مكتب قانوني سعودي</p>
-          <h1 className="mt-6 text-4xl font-semibold leading-[1.25] tracking-tight text-primary-foreground md:text-6xl">
+          <h1 className="mt-6 text-4xl font-semibold leading-[1.25] text-primary-foreground md:text-6xl">
             الحميدي للمحاماة والاستشارات القانونية
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-9 text-primary-foreground/75 md:text-lg">
