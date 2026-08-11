@@ -100,7 +100,7 @@
 
 @utility eyebrow {
   font-size: 0.75rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0;
   color: color-mix(in oklab, var(--navy) 70%, transparent);
   font-weight: 500;
 }
