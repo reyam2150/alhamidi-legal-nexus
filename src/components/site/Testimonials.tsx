@@ -35,8 +35,7 @@ export function Testimonials() {
             >
               <p className="text-base leading-9 text-ink/80 md:text-lg">{item.text}</p>
               <footer className="mt-7">
-                <p className="text-sm font-semibold text-primary">{item.name}</p>
-                <p className="text-xs text-muted-foreground">{item.role}</p>
+                <p className="text-sm font-semibold text-primary">{item.role}</p>
               </footer>
             </motion.blockquote>
           </AnimatePresence>
