@@ -95,11 +95,15 @@ export function ConsultForm() {
               className="grid gap-5 rounded-sm bg-background p-8 shadow-luxe md:grid-cols-2 md:p-10"
             >
               <div>
-                <label className="mb-2 block text-xs text-muted-foreground">الاسم الكامل</label>
+                <label className="mb-2 block text-xs text-muted-foreground">
+                  الاسم الكامل <span className="text-destructive">*</span>
+                </label>
                 <input name="name" maxLength={100} className={field} placeholder="الاسم الكامل" />
               </div>
               <div>
-                <label className="mb-2 block text-xs text-muted-foreground">رقم الجوال</label>
+                <label className="mb-2 block text-xs text-muted-foreground">
+                  رقم الجوال <span className="text-destructive">*</span>
+                </label>
                 <input
                   name="phone"
                   inputMode="tel"
@@ -119,7 +123,9 @@ export function ConsultForm() {
                 />
               </div>
               <div>
-                <label className="mb-2 block text-xs text-muted-foreground">نوع الخدمة</label>
+                <label className="mb-2 block text-xs text-muted-foreground">
+                  نوع الخدمة <span className="text-destructive">*</span>
+                </label>
                 <select name="service" className={field} defaultValue={serviceOptions[0]}>
                   {serviceOptions.map((s) => (
                     <option key={s} value={s}>
@@ -130,7 +136,7 @@ export function ConsultForm() {
               </div>
               <div className="md:col-span-2">
                 <label className="mb-2 block text-xs text-muted-foreground">
-                  وصف مختصر للحالة
+                  وصف مختصر للحالة <span className="text-destructive">*</span>
                 </label>
                 <textarea
                   name="details"
