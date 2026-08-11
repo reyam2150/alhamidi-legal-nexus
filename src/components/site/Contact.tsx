@@ -6,7 +6,7 @@ const info = [
   { icon: MessageCircle, label: "واتساب", value: "+966 50 600 7896", href: "https://wa.me/966506007896" },
   { icon: Mail, label: "البريد الإلكتروني", value: "humidilawyer@gmail.com", href: "mailto:humidilawyer@gmail.com" },
   { icon: MapPin, label: "عنوان المكتب", value: "حي البلدية، حفر الباطن، المملكة العربية السعودية" },
-  { icon: Clock, label: "ساعات العمل", value: "الأحد - الخميس: ٩:٠٠ ص - ٥:٠٠ م" },
+  { icon: Clock, label: "ساعات العمل", value: "السبت - الخميس: ٨:٠٠ ص - ١٠:٠٠ م" },
 ];
 
 export function Contact() {

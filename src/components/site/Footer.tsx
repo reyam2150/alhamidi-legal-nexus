@@ -77,7 +77,7 @@ export function Footer() {
               </a>
             </li>
             <li>حي البلدية، حفر الباطن، المملكة العربية السعودية</li>
-            <li>الأحد - الخميس: ٩:٠٠ ص - ٥:٠٠ م</li>
+            <li>السبت - الخميس: ٨:٠٠ ص - ١٠:٠٠ م</li>
           </ul>
           <div className="mt-5 flex gap-3 text-sm text-primary-foreground/60">
             <a href="https://wa.me/966506007896" className="hover:text-primary-foreground">
