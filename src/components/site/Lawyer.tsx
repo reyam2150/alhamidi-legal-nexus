@@ -5,7 +5,8 @@ import portraitAsset from "@/assets/lawyer-humaidi.jpeg.asset.json";
 const qualifications = [
   "بكالوريوس قانون",
   "مرخص من الهيئة السعودية للمحامين",
-  "دورات متخصصة في التحكيم التجاري",
+  "حاصل على دورات متخصصة في المجال القانوني من بريطانيا",
+  "إتقان اللغة الإنجليزية من خلال دراسة اللغة في المملكة المتحدة، مما يعزز القدرة على التعامل مع القضايا والمستندات القانونية باللغة الإنجليزية",
   "عضوية في جهات قانونية مهنية",
 ];
 
@@ -13,7 +14,7 @@ const specialties = [
   "القضايا التجارية",
   "العقود والاتفاقيات",
   "القضايا العمالية",
-  "التنفيذ والتحكيم",
+  "قضايا التنفيذ",
 ];
 
 export function Lawyer() {
@@ -36,7 +37,7 @@ export function Lawyer() {
 
         <Reveal delay={0.1}>
           <p className="eyebrow">نبذة عن المحامي</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-primary md:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold text-primary md:text-4xl">
             الحميدي
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">محامٍ ومستشار قانوني</p>
@@ -44,7 +45,7 @@ export function Lawyer() {
           <p className="text-sm leading-9 text-muted-foreground">
             محامٍ ومستشار قانوني يعمل على تقديم خدمة قانونية دقيقة تبدأ من الاستماع للحالة، ثم
             دراستها نظاميًا، وتقديم الرأي المناسب أو مباشرة الإجراءات. يتابع القضايا بنفسه، ويحرص
-            على وضوح التواصل مع العميل في كل مرحلة. (نص تجريبي قابل للتعديل من لوحة التحكم.)
+            على وضوح التواصل مع العميل في كل مرحلة.
           </p>
 
           <div className="mt-8 grid gap-8 sm:grid-cols-2">
