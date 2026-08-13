@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -26,41 +26,27 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       - name: Install dependencies
         run: npm install
 
       - name: Build
         run: npm run build
-
-      - name: Prepare GitHub Pages
+        
+      - name: Check public output
         run: |
-          echo "=== .output/public ==="
-          ls -la .output/public
+          echo "=== .output ==="
+          find .output -maxdepth 3 -type f | head -100
 
-          if [ -f ".output/public/_shell.html" ]; then
-            cp .output/public/_shell.html .output/public/index.html
-          elif [ -f ".output/public/index.html" ]; then
-            echo "index.html already exists"
-          else
-            echo "ERROR: No _shell.html or index.html found"
-            exit 1
-          fi
-
-          touch .output/public/.nojekyll
-
-          echo "=== Final Pages files ==="
-          ls -la .output/public
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ".output/public"
-
+         path: "./.output/public"
+        
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
