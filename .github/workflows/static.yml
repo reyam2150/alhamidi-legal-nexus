@@ -32,6 +32,12 @@ jobs:
 
       - name: Build
         run: npm run build
+        
+      - name: Check public output
+        run: |
+          echo "=== .output ==="
+          find .output -maxdepth 3 -type f | head -100
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
