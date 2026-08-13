@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/logo-full.png.asset.json";
+import logoUrl from "@/assets/logo-full.png";
 
 const quick = [
   { href: "#home", label: "الرئيسية" },
@@ -21,7 +21,7 @@ export function Footer() {
       <div className="container-luxe grid gap-12 pb-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="شعار مكتب الحميدي للمحاماة والاستشارات القانونية"
             width={1228}
             height={344}

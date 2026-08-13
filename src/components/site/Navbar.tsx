@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/logo-full.png.asset.json";
+import logoUrl from "@/assets/logo-full.png";
 
 const links = [
   { href: "#home", label: "الرئيسية" },
@@ -33,7 +33,7 @@ export function Navbar() {
       <nav className="container-luxe flex h-20 items-center justify-between gap-6">
         <a href="#home" className="flex items-center gap-3">
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="شعار مكتب الحميدي للمحاماة والاستشارات القانونية"
             width={1228}
             height={344}
