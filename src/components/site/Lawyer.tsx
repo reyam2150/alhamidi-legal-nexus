@@ -1,6 +1,6 @@
 import { Reveal } from "./Reveal";
 import { Mail, Phone, MessageCircle } from "lucide-react";
-import portraitAsset from "@/assets/lawyer-humaidi.jpeg.asset.json";
+import portraitUrl from "@/assets/lawyer-humaidi.jpeg";
 
 const qualifications = [
   "بكالوريوس قانون",
@@ -25,7 +25,7 @@ export function Lawyer() {
           <div className="relative">
             <div className="absolute -bottom-5 -left-5 hidden h-full w-full rounded-sm border border-primary/20 sm:block" />
             <img
-              src={portraitAsset.url}
+              src={portraitUrl}
               alt="المحامي والمستشار القانوني في مكتب الحميدي"
               width={1109}
               height={1280}
