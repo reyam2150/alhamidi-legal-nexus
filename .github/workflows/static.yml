@@ -32,6 +32,15 @@ jobs:
 
       - name: Build
         run: npm run build
+        
+      - name: Check dist
+        run: |
+          echo "=== Build output ==="
+          ls -la
+          echo "=== Dist ==="
+          ls -la dist
+          echo "=== Dist files ==="
+          find dist -maxdepth 2 -type f | head -50
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
