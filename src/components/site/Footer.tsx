@@ -1,4 +1,4 @@
-import logoUrl from "@/assets/logo-full.png";
+import { Logo } from "./Logo";
 
 const quick = [
   { href: "#home", label: "الرئيسية" },
@@ -20,14 +20,7 @@ export function Footer() {
     <footer className="bg-primary pt-20 text-primary-foreground">
       <div className="container-luxe grid gap-12 pb-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <img
-            src={logoUrl}
-            alt="شعار مكتب الحميدي للمحاماة والاستشارات القانونية"
-            width={1228}
-            height={344}
-            loading="lazy"
-            className="h-14 w-auto object-contain brightness-0 invert"
-          />
+          <Logo light className="h-auto w-64 max-w-full" />
           <p className="mt-5 text-sm leading-8 text-primary-foreground/60">
             مكتب متخصص في المحاماة والاستشارات القانونية للأفراد والشركات، بمتابعة مباشرة من
             المحامي والتزام كامل بالسرية.
@@ -64,7 +57,7 @@ export function Footer() {
           <h3 className="text-sm font-semibold">معلومات التواصل</h3>
           <ul className="mt-5 space-y-3 text-sm text-primary-foreground/60">
             <li>
-              <a href="tel:+966506007896" className="transition hover:text-primary-foreground">
+              <a href="tel:+966506007896" dir="ltr" className="transition hover:text-primary-foreground">
                 +966 50 600 7896
               </a>
             </li>

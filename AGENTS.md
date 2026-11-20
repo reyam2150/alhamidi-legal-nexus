@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Store official logo sources as managed asset pointers and materialize them into `public/brand` before dev/build; local public URLs keep previews and Vercel exports portable.
+- Keep the lawyer biography text-only in a centered, constrained layout; removing portrait assets must not remove biographical content.

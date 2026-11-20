@@ -17,7 +17,7 @@ export function Hero() {
         alt="مكتب محاماة فاخر بإضاءة هادئة"
         width={1920}
         height={1280}
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
+        className="absolute inset-0 -z-10 h-full w-full object-cover grayscale"
       />
       <div className="absolute inset-0 -z-10 bg-primary/85" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-primary via-primary/60 to-primary/70" />
@@ -60,7 +60,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
-              className="bg-primary/60 p-7 backdrop-blur-sm transition-colors hover:bg-primary/40"
+              className="bg-dark-card/90 p-7 backdrop-blur-sm transition-colors hover:bg-dark-card"
             >
               <c.icon className="text-primary-foreground/80" size={22} strokeWidth={1.5} />
               <h3 className="mt-5 text-sm font-semibold text-primary-foreground">{c.title}</h3>

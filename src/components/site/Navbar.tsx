@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoUrl from "@/assets/logo-full.png";
+import { Logo } from "./Logo";
+import { Button } from "@/components/ui/button";
 
 const links = [
   { href: "#home", label: "الرئيسية" },
@@ -30,18 +31,12 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <nav className="container-luxe flex h-20 items-center justify-between gap-6">
-        <a href="#home" className="flex items-center gap-3">
-          <img
-            src={logoUrl}
-            alt="شعار مكتب الحميدي للمحاماة والاستشارات القانونية"
-            width={1228}
-            height={344}
-            className={`h-11 w-auto object-contain transition ${scrolled ? "" : "brightness-0 invert"}`}
-          />
+      <nav className="container-luxe flex h-20 items-center justify-between gap-3 xl:gap-6">
+        <a href="#home" className="flex min-w-0 shrink-0 items-center">
+          <Logo light={!scrolled} className="h-auto w-52 max-w-[65vw] transition xl:w-60" />
         </a>
 
-        <ul className="hidden items-center gap-7 text-sm lg:flex">
+        <ul className="hidden items-center gap-5 text-sm xl:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -59,30 +54,35 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a
-            href="#consult"
-            className={`hidden rounded-sm px-5 py-2.5 text-sm font-medium transition sm:inline-flex ${
+          <Button asChild variant="ghost"
+            className={`hidden h-auto rounded-sm px-5 py-2.5 text-sm font-medium transition sm:inline-flex ${
               scrolled
-                ? "bg-primary text-primary-foreground hover:opacity-90"
+                ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground"
                 : "border border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
             }`}
           >
+          <a href="#consult">
             احجز استشارة قانونية
           </a>
-          <button
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
             aria-label="القائمة"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
             onClick={() => setOpen((v) => !v)}
-            className={`inline-flex h-10 w-10 items-center justify-center rounded-sm lg:hidden ${
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-sm xl:hidden ${
               scrolled ? "text-primary" : "text-primary-foreground"
             }`}
           >
             {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          </Button>
         </div>
       </nav>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div id="mobile-navigation" className="border-t border-border bg-background xl:hidden">
           <ul className="container-luxe flex flex-col py-3">
             {links.map((l) => (
               <li key={l.href}>

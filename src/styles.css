@@ -1,6 +1,6 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
+@source "../src";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -30,8 +30,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-navy: var(--navy);
-  --color-navy-foreground: var(--navy-foreground);
+  --color-dark-card: var(--dark-card);
   --color-ink: var(--ink);
   --shadow-luxe: var(--shadow-luxe);
   --shadow-card: var(--shadow-card);
@@ -40,33 +39,29 @@
 :root {
   --radius: 0.25rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(0 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  /* #0F2342 */
-  --primary: oklch(0.265 0.061 258.5);
+  --popover-foreground: oklch(0 0 0);
+  --primary: oklch(0 0 0);
   --primary-foreground: oklch(1 0 0);
-  /* #F5F5F5 */
-  --secondary: oklch(0.968 0 0);
-  --secondary-foreground: oklch(0.265 0.061 258.5);
-  --muted: oklch(0.968 0 0);
-  --muted-foreground: oklch(0.5 0.01 260);
-  --accent: oklch(0.968 0 0);
-  --accent-foreground: oklch(0.265 0.061 258.5);
-  --destructive: oklch(0.577 0.245 27.325);
+  --secondary: oklch(0.976 0 0);
+  --secondary-foreground: oklch(0 0 0);
+  --muted: oklch(0.976 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.976 0 0);
+  --accent-foreground: oklch(0 0 0);
+  --destructive: oklch(0 0 0);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.916 0.004 260);
-  --input: oklch(0.916 0.004 260);
-  --ring: oklch(0.265 0.061 258.5);
-  --navy: oklch(0.265 0.061 258.5);
-  --navy-foreground: oklch(1 0 0);
-  /* #111111 */
-  --ink: oklch(0.18 0 0);
-  --shadow-luxe: 0 30px 80px -40px color-mix(in oklab, var(--navy) 45%, transparent);
-  --shadow-card: 0 1px 2px color-mix(in oklab, var(--navy) 6%, transparent),
-    0 18px 40px -30px color-mix(in oklab, var(--navy) 35%, transparent);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0 0 0);
+  --ink: oklch(0.178 0 0);
+  --dark-card: oklch(0.218 0 0);
+  --shadow-luxe: 0 20px 50px -35px color-mix(in oklab, var(--primary) 28%, transparent);
+  --shadow-card: 0 1px 2px color-mix(in oklab, var(--primary) 5%, transparent),
+    0 12px 30px -25px color-mix(in oklab, var(--primary) 20%, transparent);
 }
 
 @layer base {
@@ -86,8 +81,8 @@
   }
 
   ::selection {
-    background: color-mix(in oklab, var(--navy) 88%, transparent);
-    color: #fff;
+    background: color-mix(in oklab, var(--primary) 88%, transparent);
+    color: var(--primary-foreground);
   }
 }
 
@@ -101,7 +96,7 @@
 @utility eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0;
-  color: color-mix(in oklab, var(--navy) 70%, transparent);
+  color: color-mix(in oklab, var(--primary) 70%, transparent);
   font-weight: 500;
 }
 
@@ -109,7 +104,7 @@
   background: linear-gradient(
     to left,
     transparent,
-    color-mix(in oklab, var(--navy) 30%, transparent),
+    color-mix(in oklab, var(--primary) 30%, transparent),
     transparent
   );
   height: 1px;

@@ -25,7 +25,7 @@ export function WhyUs() {
         <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-primary-foreground/15 bg-primary-foreground/10 sm:grid-cols-2 lg:grid-cols-4">
           {points.map((p, i) => (
             <Reveal key={p} delay={(i % 4) * 0.06}>
-              <div className="flex h-full items-center gap-4 bg-primary p-7 transition-colors hover:bg-primary-foreground/5">
+              <div className="flex h-full items-center gap-4 bg-dark-card p-7 transition-colors hover:bg-primary-foreground/5">
                 <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary-foreground/30 text-primary-foreground">
                   <Check size={14} />
                 </span>

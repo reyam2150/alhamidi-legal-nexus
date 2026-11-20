@@ -1,6 +1,5 @@
 import { Reveal } from "./Reveal";
 import { Mail, Phone, MessageCircle } from "lucide-react";
-import portraitUrl from "@/assets/lawyer-humaidi.jpeg";
 
 const qualifications = [
   "بكالوريوس قانون",
@@ -20,21 +19,8 @@ const specialties = [
 export function Lawyer() {
   return (
     <section id="lawyer" className="bg-background py-24 md:py-32">
-      <div className="container-luxe grid items-center gap-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)]">
-        <Reveal>
-          <div className="relative">
-            <div className="absolute -bottom-5 -left-5 hidden h-full w-full rounded-sm border border-primary/20 sm:block" />
-            <img
-              src={portraitUrl}
-              alt="المحامي والمستشار القانوني في مكتب الحميدي"
-              width={1109}
-              height={1280}
-              loading="lazy"
-              className="relative w-full rounded-sm object-cover shadow-luxe"
-            />
-          </div>
-        </Reveal>
-
+      <div className="container-luxe">
+        <div className="mx-auto max-w-4xl">
         <Reveal delay={0.1}>
           <p className="eyebrow">نبذة عن المحامي</p>
           <h2 className="mt-4 text-3xl font-semibold text-primary md:text-4xl">
@@ -48,7 +34,7 @@ export function Lawyer() {
             على وضوح التواصل مع العميل في كل مرحلة.
           </p>
 
-          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+          <div className="mt-8 grid gap-8 border-t border-border pt-8 sm:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
             <div>
               <h3 className="text-sm font-semibold text-primary">المؤهلات</h3>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
@@ -98,6 +84,7 @@ export function Lawyer() {
             </div>
           </div>
         </Reveal>
+        </div>
       </div>
     </section>
   );
